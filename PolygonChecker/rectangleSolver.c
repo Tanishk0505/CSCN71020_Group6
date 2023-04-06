@@ -19,7 +19,6 @@ float rectangleArea(RECTANGLEAXIS* p) {
 
     // Calculate area
     float area = length * width;
-
     return area;
 }
 bool validateRectangle(RECTANGLEAXIS* p) {
@@ -36,6 +35,7 @@ bool validateRectangle(RECTANGLEAXIS* p) {
     // Check if the sides are parallel and diagonals are equal
     if (side1 == side3 && side2 == side4 && diagonal1 == diagonal2) {
         printf("it is rectangle\n");
+        printf("Perimeter of the rectangle is: %f\n", rectangleperimeter(p));
         printf("Rectangle's area is %f\n", rectangleArea(p));
         return true;
     }
@@ -43,5 +43,23 @@ bool validateRectangle(RECTANGLEAXIS* p) {
 
         printf("Not A Rectangle\n");
         return false;
+    } 
+}
+float rectangleperimeter(RECTANGLEAXIS* p) {
+    float length, width;
+
+    // Calculate length and width
+    if (p[0].x == p[1].x) {
+        length = fabs(p[1].y - p[0].y);
+        width = fabs(p[2].x - p[1].x);
     }
+    else {
+        length = fabs(p[2].y - p[1].y);
+        width = fabs(p[1].x - p[0].x);
+    }
+
+    // Calculate perimeter
+    float sumS = length + width;
+    float perimeter = 2 * sumS;
+    return perimeter;
 }

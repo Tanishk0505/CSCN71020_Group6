@@ -7,3 +7,4 @@ typedef struct rectangleAxis {
 
 float rectangleArea(RECTANGLEAXIS*);
 bool validateRectangle(RECTANGLEAXIS*);
+float rectangleperimeter(RECTANGLEAXIS*);
