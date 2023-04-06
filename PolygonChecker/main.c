@@ -8,7 +8,7 @@
 RECTANGLEAXIS* getRectanglePoint(RECTANGLEAXIS* p) {
 	for (int i = 0; i < 4; i++)
 	{
-		printf("enter %d x,y coordinates:", i + 1);
+		printf("enter %d x,y coordinates: ", i + 1);
 		scanf_s("%f %f", &p[i].x, &p[i].y);
 	}
 	return p;
