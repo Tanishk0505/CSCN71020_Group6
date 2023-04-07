@@ -70,17 +70,5 @@ namespace triangleSolverunitTests
 
 			Assert::AreEqual("Not a triangle", answer);
 		}
-
-		TEST_METHOD(calculateAngles_test1)
-		{
-
-			double x = 3;
-			double y = 3;
-			double z = 3;
-
-			char* answer = analyzeTriangle(x, y, z);
-
-			Assert::AreEqual("Not a triangle", answer);
-		}
 	};
 }
