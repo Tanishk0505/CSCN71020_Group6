@@ -121,7 +121,7 @@ namespace triangleSolverunitTests
 		TEST_METHOD(TestValidateRectangle_NotRectangle)
 		{
 			RECTANGLEAXIS p[4] = { {0, 0}, {1, 1}, {2, 2}, {3, 3} };
-			Assert::IsTrue(validateRectangle(p));
+			Assert::IsFalse(validateRectangle(p));
 		}
 
 		TEST_METHOD(TestValidateRectangle_Square)
@@ -133,7 +133,7 @@ namespace triangleSolverunitTests
 		TEST_METHOD(TestValidateRectangle_Rhombus)
 		{
 			RECTANGLEAXIS p[4] = { {0, 0}, {3, 4}, {6, 0}, {3, -4} };
-			Assert::IsTrue(validateRectangle(p));
+			Assert::IsFalse(validateRectangle(p));
 		}
 		TEST_METHOD(TestRectanglePerimeter_SmallRectangle)
 		{
