@@ -13,7 +13,7 @@ char* analyzeTriangle(double side1, double side2, double side3) {
 	{
 		if (side1 >= (side2 + side3) || side2 >= (side1 + side3) || side3 >= (side1 + side2))
 		{
-			printf("Not a Triangle");
+			result = ("Not a triangle");
 		}
 		else if (side1 == side2 && side1 == side3)
 		{
@@ -55,18 +55,5 @@ void calculateAngles(double side1, double side2, double side3)
 
 	printf("Angles: %6.2f %6.2f %6.2f\n", A, B, C);
 
-
-	/*s = (side1 + side2 + side3) / 2;
-
-	float area = sqrt(s * (s - side1) * (s - side2) * (s - side3));
-
-	R = (side1 * side2 * side3) / (4 * area);
-
-	A = (180 / pi) * asin(side1 / (2 * R));
-	B = (180 / pi) * asin(side2 / (2 * R));
-	C = (180 / pi) * asin(side3 / (2 * R));
-
-	printf("Angles: %6.2f %6.2f %6.2f\n", A, B, C);
-	*/
 }
 
