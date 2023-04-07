@@ -1,5 +1,5 @@
 #pragma once
 
-char* analyzeTriangle(double side1, double side2, double side3);
-void calculateAngles(double side1, double side2, double side3);
+char* analyzeTriangle(double, double, double);
+void calculateAngles(double, double, double);
 
